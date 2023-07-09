@@ -1,5 +1,5 @@
-const todoInput = document.getAnimations('todo-input');
-const addTaskButton = document.getAnimations('add-task-btn');
+const todoInput = document.getElementById('todo-input');
+const addTaskButton = document.getElementById('add-task-btn');
 const todoList = document.getElementById('todo-list');
 
 // Add a task
@@ -7,13 +7,13 @@ const addTask = () => {
     const taskText = todoInput.value.trim();
 
     if(taskText !==''){
-        const taskItem = createTaskItem(taskItem);
+        const taskItem = createTaskItem(taskText);
         todoList.appendChild(taskItem);
         todoInput.value = '';
     }
 }
 // Create new task items
-const createNewTask = (taskText) => {
+const createTaskItem = (taskText) => {
     const taskItem = document.createElement('li');
     taskItem.className = "todo-item";
 
@@ -47,7 +47,7 @@ const toggleTask = (event) => {
 }
 // Event listeners
 addTaskButton.addEventListener('click', addTask);
-todoInput,addEventListener('keydown', function (event) {
+todoInput.addEventListener('keydown', function (event) {
     if (event.key === 'Enter') {
         addTask();
     }
