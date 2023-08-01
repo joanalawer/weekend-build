@@ -101,7 +101,7 @@ nav {
         left: 0;
         width: 100%;
         padding: 30px;
-        transition: 0.3s ease-in-out;
+        transition: 0.3s slide-down;
         opacity: 0;
     }
 
@@ -111,9 +111,22 @@ nav {
         background-color: #0b2239f9;
     }
 
-    @keyframes identifier {
+    @keyframes slide-down {
         0% {
-            
+            top: -250%;
+            opacity: 0;
+        }
+        50% {
+            top: 0%;
+            opacity: 0.1;
+        }
+        75% {
+            top: 20px;
+            opacity: 0.5;
+        }
+        100% {
+            top: 70px;
+            opacity: 1;
         }
     }
 
