@@ -101,13 +101,20 @@ nav {
         left: 0;
         width: 100%;
         padding: 30px;
-        transition: 0.3s;
+        transition: 0.3s ease-in-out;
+        opacity: 0;
     }
 
     .menu-links.active {
-        opacity: 0.7;
+        opacity: 0.9;
         top: 70px;
         background-color: #0b2239f9;
+    }
+
+    @keyframes identifier {
+        0% {
+            
+        }
     }
 
     .menu-links li a {
